@@ -5,12 +5,18 @@ from mtranslate import translate
 import logging
 
 from aiogram import Bot, Dispatcher, executor, types
+import os
+from dotenv import load_dotenv
 
-API_TOKEN = BOT_TOKENa
+load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+CHANNEL_ID = os.getenv('CHANNEL_ID')
+SITE = os.getenv('SITE')
+
+API_TOKEN = BOT_TOKEN
 lnn = 'Top Growth Stocks for April 202'
-url = 'https://www.investopedia.com/'
-channel_id = -1001975777742
-
+url = SITE
 
 class CustomFormatter(logging.Formatter):
     grey = "\x1b[38;20m"
@@ -56,7 +62,7 @@ async def send_welcome(message: types.Message):
             post_message = f'<b>{translate(news_header, "uz")}</b>\n\n{news_about}Batafsil: {last_news["href"]}'
             news_photo = news_page.find('img', sizes="750px")['src']
 
-            await bot.send_photo(channel_id, news_photo, post_message, 'HTML')
+            await bot.send_photo(CHANNEL_ID, news_photo, post_message, 'HTML')
             await message.answer_photo(news_photo, post_message, 'HTML')
             print('New post: ' + translate(news_header, 'uz'))
             logging.info('New post: ' + translate(news_header, 'uz'))
