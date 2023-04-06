@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pythonproject"
+version = "0.1.0"
+description = ""
+authors = ["Abdujalil G'offorov <abdujalilgofforov048@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bs4 = "^0.0.1"
+requests = "^2.28.2"
+aiogram = "^2.25.1"
+setuptools = "^67.6.1"
+googletrans = "4.0.0-rc1"
+mtranslate = "^1.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
