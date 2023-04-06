@@ -6,7 +6,7 @@ import logging
 
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = '6117395006:AAGA23nlzBzpA-tUZtmEw6GMcU17-xoSYYM'
+API_TOKEN = BOT_TOKENa
 lnn = 'Top Growth Stocks for April 202'
 url = 'https://www.investopedia.com/'
 channel_id = -1001975777742
