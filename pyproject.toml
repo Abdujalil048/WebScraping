@@ -13,6 +13,7 @@ aiogram = "^2.25.1"
 setuptools = "^67.6.1"
 googletrans = "4.0.0-rc1"
 mtranslate = "^1.8"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
